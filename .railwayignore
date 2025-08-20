@@ -1,0 +1,7 @@
+# Using pre-built image, so exclude everything except Railway files
+*
+
+# Include only Railway deployment files  
+!railway.json
+!.railway/
+!.railway/**
