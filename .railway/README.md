@@ -30,24 +30,26 @@ Configure these in Railway's dashboard or via CLI:
 
 | Variable | Description | Default | Required |
 |----------|-------------|---------|----------|
-| `CLICKHOUSE_VERSION` | ClickHouse Docker image version | `25.7.4.11` | No |
-| `CLICKHOUSE_USER` | Database username | `default` | No |
-| `CLICKHOUSE_PASSWORD` | Database password | *(none)* | **Yes** |
-| `CLICKHOUSE_DB` | Default database to create | *(none)* | No |
-| `CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT` | Enable SQL user management (0/1) | `0` | No |
+| `CLICKHOUSE_IMAGE_TAG` | ClickHouse Docker image tag ([available tags](https://hub.docker.com/r/clickhouse/clickhouse-server/tags)) | `25.7.4.11` | No |
+| `CLICKHOUSE_USER` | Username to create (replaces 'default' user) | `default` | No |
+| `CLICKHOUSE_PASSWORD` | User password (required for network access) | *(none)* | **Yes** |
+| `CLICKHOUSE_DB` | Database to create on startup | *(none)* | No |
+| `CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT` | Grant user access management privileges (0/1) | `0` | No |
 
-### Version Management
+### Image Tag Management
 
-Change ClickHouse version without modifying code:
+Change ClickHouse Docker image without modifying code:
 ```bash
 # Set in Railway dashboard
-CLICKHOUSE_VERSION=24.8.1.1
+CLICKHOUSE_IMAGE_TAG=24.8.1.1
 ```
 
-Supported version formats:
+Supported tag formats:
 - `25.7.4.11` - Specific version
 - `25.7.4.11-alpine` - Alpine variant
 - `latest` - Latest stable (not recommended for production)
+- `head` - Development build
+- `24.8-lts` - LTS branch
 
 ## Files
 

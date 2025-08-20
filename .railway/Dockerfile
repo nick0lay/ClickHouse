@@ -1,7 +1,7 @@
-# Use official pre-built ClickHouse image (no building from source), could be 
-# overridden by Railway environment variable `CLICKHOUSE_VERSION`
-ARG CLICKHOUSE_VERSION=25.7.4.11
-FROM clickhouse/clickhouse-server:${CLICKHOUSE_VERSION}
+# Use official pre-built ClickHouse image (no building from source)
+# Can be overridden by Railway environment variable `CLICKHOUSE_IMAGE_TAG`
+ARG CLICKHOUSE_IMAGE_TAG=25.7.4.11
+FROM clickhouse/clickhouse-server:${CLICKHOUSE_IMAGE_TAG}
 
 # Copy network configuration to force external binding
 COPY .railway/network.xml /etc/clickhouse-server/config.d/railway.xml

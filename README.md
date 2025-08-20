@@ -19,6 +19,10 @@
 curl https://clickhouse.com/ | sh
 ```
 
+## How To Deploy on Railway
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/PmxhM-?referralCode=CG2P3Y)
+
 ## Useful Links
 
 * [Official website](https://clickhouse.com/) has a quick high-level overview of ClickHouse on the main page.

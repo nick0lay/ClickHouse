@@ -124,7 +124,7 @@ railway logs
 Set these in Railway dashboard or CLI:
 
 - `CLICKHOUSE_PASSWORD` - Database password (required)
-- `CLICKHOUSE_VERSION` - ClickHouse version (default: 25.7.4.11)
+- `CLICKHOUSE_IMAGE_TAG` - ClickHouse Docker image tag (default: 25.7.4.11)
 - `CLICKHOUSE_USER` - Username (default: default)
 - `CLICKHOUSE_DB` - Default database to create
 
@@ -141,13 +141,13 @@ curl -u "default:password" "https://your-app.railway.app/" -d "SELECT 1"
 curl -u "default:password" "https://your-app.railway.app/" -d "SELECT version()"
 ```
 
-### Version Management
+### Image Tag Management
 
-Change ClickHouse version via environment variable without code changes:
+Change ClickHouse Docker image via environment variable without code changes:
 
 ```bash
 # Set in Railway dashboard
-CLICKHOUSE_VERSION=24.8.1.1
+CLICKHOUSE_IMAGE_TAG=24.8.1.1
 
 # Redeploy
 railway up --service clickhouse
