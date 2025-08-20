@@ -21,7 +21,7 @@ curl https://clickhouse.com/ | sh
 
 ## How To Deploy on Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/PmxhM-?referralCode=CG2P3Y)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/BOypRG?referralCode=CG2P3Y&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 ## Useful Links
 

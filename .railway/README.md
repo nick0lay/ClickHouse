@@ -6,9 +6,11 @@ This directory contains configuration files for deploying ClickHouse on [Railway
 
 Deploy ClickHouse to Railway using the pre-configured template:
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/PmxhM-?referralCode=CG2P3Y)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/BOypRG?referralCode=CG2P3Y&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
-**Template URL:** https://railway.com/deploy/PmxhM-?referralCode=CG2P3Y
+**Template URLs:**
+- **Direct Deploy:** https://railway.com/deploy/BOypRG?referralCode=CG2P3Y&utm_medium=integration&utm_source=template&utm_campaign=generic
+- **Marketplace:** https://railway.com/deploy/clickhouse-1
 
 ## Manual Deployment
 
@@ -34,7 +36,8 @@ Configure these in Railway's dashboard or via CLI:
 | `CLICKHOUSE_USER` | Username to create (replaces 'default' user) | `default` | No |
 | `CLICKHOUSE_PASSWORD` | User password (required for network access) | *(none)* | **Yes** |
 | `CLICKHOUSE_DB` | Database to create on startup | *(none)* | No |
-| `CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT` | Grant user access management privileges (0/1) | `0` | No |
+| `CLICKHOUSE_ACCESS_MANAGEMENT` | Grant user access management privileges (0/1) | `0` | No |
+| `CLICKHOUSE_SKIP_USER_SETUP` | Skip user configuration - WARNING: Security risk (0/1) | `0` | No |
 
 ### Image Tag Management
 
