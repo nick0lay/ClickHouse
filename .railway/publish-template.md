@@ -83,7 +83,7 @@ clickhouse-client --host your-app.railway.app --port 443 --secure
 
 ## Why Deploy ClickHouse Server on Railway?
 
-Railway is a singular platform to deploy your infrastructure stack. Railway will host your infrastructure so you don't have to deal with configuration, while allowing you to vertically and horizontally scale it.
+Railway is a singular platform to deploy your infrastructure stack. Railway will host your infrastructure so you don't have to deal with configuration, while allowing you to vertically scale your ClickHouse instance as your data grows.
 
 By deploying ClickHouse Server on Railway, you are one step closer to supporting a complete full-stack application with minimal burden. Host your servers, databases, AI agents, and more on Railway.
 
@@ -91,7 +91,7 @@ By deploying ClickHouse Server on Railway, you are one step closer to supporting
 
 - **One-Click Deployment**: Deploy a production-ready ClickHouse instance in seconds
 - **Version Management**: Switch ClickHouse versions instantly via environment variables
-- **Automatic Scaling**: Scale vertically as your data grows
+- **Vertical Scaling**: Scale CPU and memory resources as your data grows
 - **Built-in Monitoring**: Health checks and logs integrated with Railway dashboard
 - **Persistent Storage**: Data persists across deployments and restarts
 - **Secure by Default**: Required authentication and network isolation

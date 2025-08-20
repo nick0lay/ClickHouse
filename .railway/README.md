@@ -91,14 +91,6 @@ clickhouse-client \
 - **Cause**: ClickHouse not binding to Railway's PORT
 - **Fix**: Ensure `network.xml` is properly configured
 
-### Authentication Failed
-- **Cause**: Password not set or incorrect
-- **Fix**: Set `CLICKHOUSE_PASSWORD` in Railway environment variables
-
-### Container Restart Loop
-- **Cause**: Configuration error or resource limits
-- **Fix**: Check Railway logs: `railway logs`
-
 ### Logs Show as "error" Level
 - **Cause**: ClickHouse outputs startup messages to stderr, Railway interprets all stderr as errors
 - **Impact**: Cosmetic only - these are informational messages, not actual errors
@@ -107,31 +99,6 @@ clickhouse-client \
   - `Merging configuration file '/etc/clickhouse-server/config.d/railway.xml'`
   - `Logging trace to /var/log/clickhouse-server/clickhouse-server.log`
 - **Note**: This is a Railway platform limitation and doesn't affect ClickHouse functionality
-
-## Security Notes
-
-1. **Always set a strong password** for production deployments
-2. **Avoid using** Railway's `${{secret()}}` template (generates new password each time)
-3. **Generate secure passwords**:
-   ```bash
-   openssl rand -base64 32
-   ```
-
-## Advanced Configuration
-
-To add custom ClickHouse configuration:
-
-1. Create additional XML config files in `.railway/`
-2. Add COPY instructions to `Dockerfile`
-3. Files will be merged with default configuration
-
-Example custom config:
-```xml
-<clickhouse>
-    <max_concurrent_queries>100</max_concurrent_queries>
-    <max_memory_usage>10737418240</max_memory_usage>
-</clickhouse>
-```
 
 ## Resources
 
