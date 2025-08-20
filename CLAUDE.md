@@ -124,7 +124,7 @@ railway logs
 Set these in Railway dashboard or CLI:
 
 - `CLICKHOUSE_PASSWORD` - Database password (required)
-- `CLICKHOUSE_IMAGE_TAG` - ClickHouse Docker image tag (default: 25.7.4.11)
+- `CLICKHOUSE_IMAGE_TAG` - ClickHouse Docker image tag (default: latest)
 - `CLICKHOUSE_USER` - Username (default: default)
 - `CLICKHOUSE_DB` - Default database to create
 

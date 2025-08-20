@@ -32,7 +32,7 @@ Configure these in Railway's dashboard or via CLI:
 
 | Variable | Description | Default | Required |
 |----------|-------------|---------|----------|
-| `CLICKHOUSE_IMAGE_TAG` | ClickHouse Docker image tag ([available tags](https://hub.docker.com/r/clickhouse/clickhouse-server/tags)) | `25.7.4.11` | No |
+| `CLICKHOUSE_IMAGE_TAG` | ClickHouse Docker image tag ([available tags](https://hub.docker.com/r/clickhouse/clickhouse-server/tags)) | `latest` | No |
 | `CLICKHOUSE_USER` | Username to create (replaces 'default' user) | `default` | No |
 | `CLICKHOUSE_PASSWORD` | User password (required for network access) | *(none)* | **Yes** |
 | `CLICKHOUSE_DB` | Database to create on startup | *(none)* | No |
@@ -44,15 +44,15 @@ Configure these in Railway's dashboard or via CLI:
 Change ClickHouse Docker image without modifying code:
 ```bash
 # Set in Railway dashboard
-CLICKHOUSE_IMAGE_TAG=24.8.1.1
+CLICKHOUSE_IMAGE_TAG=25.7.4.11
 ```
 
 Supported tag formats:
-- `25.7.4.11` - Specific version
+- `latest` - Latest stable release (default, **recommended**)
+- `25.7.4.11` - Specific version  
 - `25.7.4.11-alpine` - Alpine variant
-- `latest` - Latest stable (not recommended for production)
-- `head` - Development build
-- `24.8-lts` - LTS branch
+- `25.7` - Latest patch in branch
+- `head` - Development build (not recommended for production)
 
 ## Files
 

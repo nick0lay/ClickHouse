@@ -37,16 +37,16 @@ Hosting ClickHouse requires server configuration, dependency management, network
 Unlike fixed-version deployments, this template supports any ClickHouse Docker tag:
 
 ```bash
+CLICKHOUSE_IMAGE_TAG=latest           # Latest stable (default, recommended)
 CLICKHOUSE_IMAGE_TAG=25.7.4.11        # Specific version
 CLICKHOUSE_IMAGE_TAG=25.7.4.11-alpine # Alpine variant
-CLICKHOUSE_IMAGE_TAG=latest           # Latest stable  
+CLICKHOUSE_IMAGE_TAG=25.7             # Latest patch in branch
 CLICKHOUSE_IMAGE_TAG=head             # Development build
-CLICKHOUSE_IMAGE_TAG=24.8-lts         # LTS branch
 ```
 
 **Environment Variables:**
 - `CLICKHOUSE_PASSWORD` (Required): User password for database access
-- `CLICKHOUSE_IMAGE_TAG` (Optional): ClickHouse Docker image tag ([available tags](https://hub.docker.com/r/clickhouse/clickhouse-server/tags))
+- `CLICKHOUSE_IMAGE_TAG` (Optional): ClickHouse Docker image tag ([available tags](https://hub.docker.com/r/clickhouse/clickhouse-server/tags)) (default: latest)
 - `CLICKHOUSE_USER` (Optional): Username to create (default: default)
 - `CLICKHOUSE_DB` (Optional): Database to create on startup
 - `CLICKHOUSE_ACCESS_MANAGEMENT` (Optional): Grant user access management privileges (default: 0)
