@@ -2,7 +2,15 @@
 
 This directory contains configuration files for deploying ClickHouse on [Railway](https://railway.app).
 
-## Quick Start
+## One-Click Deploy
+
+Deploy ClickHouse to Railway using the pre-configured template:
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/PmxhM-?referralCode=CG2P3Y)
+
+**Template URL:** https://railway.com/deploy/PmxhM-?referralCode=CG2P3Y
+
+## Manual Deployment
 
 1. **Deploy to Railway**
    ```bash
