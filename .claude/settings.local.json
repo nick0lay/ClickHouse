@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:clickhouse.com)",
+      "Bash(railway status:*)",
+      "mcp__perplexity-ask__perplexity_ask",
+      "Bash(railway service:*)",
+      "WebFetch(domain:railway.com)",
+      "WebSearch",
+      "WebSearch",
+      "WebFetch(domain:docs.railway.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(grep:*)",
+      "Bash(docker pull:*)",
+      "Bash(railway link:*)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "context7",
+    "perplexity-ask"
+  ]
+}
